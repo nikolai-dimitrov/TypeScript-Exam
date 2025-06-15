@@ -2,7 +2,7 @@
 import { decorator1, decorator2, decorator3, decorator4 } from "../decorators.js";
 import { Room } from "./room.js";
 
-@decorator1
+// @decorator1
 export class AirconditionedRoom implements Room {
     public readonly roomNumber;
     private _price!: number;
@@ -12,16 +12,17 @@ export class AirconditionedRoom implements Room {
         this.roomNumber = roomNumber;
     }
 
-    private setPrice(@decorator4 val: number){
+    // @decorator4 TODO: Look at the picture for decorator 4 and move it into a function setPrice before val param
+    private setPrice(val: number){
         this._price = val;
     }
 
-    @decorator2
+    // @decorator2
     public get totalPrice(): number {
         return this._price;
     }
 
-    @decorator3
+    // @decorator3
     public get cancellationPrice(): number {
         return this._price;
     }
