@@ -22,6 +22,7 @@ export function decorator3(target: any, methodName: string, descriptor: Property
      
     return descriptor;
 }
+
 // set price price air conditioned
 export function decorator4(target: any, methodName: string, parameterIndex:number) {}
 export function decorator5<T extends abstract new (...args: any[]) => {}>(constructor: T) {
